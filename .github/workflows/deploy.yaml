@@ -62,8 +62,6 @@ jobs:
 
           docker push ${{ secrets.DOCKER_USER }}/devops-${{ needs.detect-changes.outputs.changed_context }}:${{ github.sha }}
 
-    docker push ${{ secrets.DOCKER_USER }}/devops-${{ needs.detect-changes.outputs.changed_context }}:${{ github.sha }}
-
   deploy:
     runs-on: ubuntu-latest
     needs:

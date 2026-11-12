@@ -15,7 +15,7 @@ RUN npm run build
 
 
 
-# Этап продакшена с nginx
+# Этап продакшена   с nginx
 FROM nginx:alpine AS production
 # Копируем собранные файлы из builder этапа
 COPY --from=builder /app/dist /usr/share/nginx/html
